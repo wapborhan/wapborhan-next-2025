@@ -58,19 +58,7 @@ export const metadata: Metadata = {
     ],
   },
   manifest: "/site.webmanifest",
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: "black-translucent",
-    title: "Borhan Uddin",
-    startupImage: [
-      "/apple-touch-startup-image-640x1136.png",
-      "/apple-touch-startup-image-750x1334.png",
-      "/apple-touch-startup-image-1242x2208.png",
-      "/apple-touch-startup-image-1125x2436.png",
-      "/apple-touch-startup-image-828x1792.png",
-      "/apple-touch-startup-image-1242x2688.png",
-    ],
-  },
+
   viewport: {
     initialScale: 1,
     maximumScale: 1,
@@ -78,20 +66,7 @@ export const metadata: Metadata = {
     width: "device-width",
     height: "device-height",
   },
-  robots: {
-    index: true,
-    follow: true,
-    maxSnippet: -1,
-    maxImagePreview: "large",
-    maxVideoPreview: -1,
-    noarchive: false,
-    nosnippet: false,
-    noimageindex: false,
 
-    noydir: false,
-    notranslate: false,
-    noodp: false,
-  },
   verification: {
     google: "google-site-verification",
     yandex: "yandex-verification",
