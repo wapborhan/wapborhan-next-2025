@@ -16,11 +16,12 @@ const about = () => {
       <h2 className="text-2xl font-bold tracking-tight mb-4">
         Hey 👋 {"I'm Borhan Uddin"}
       </h2>
-      <h3>
-        Aspiring Front-End Developer | React.js & Next.js Specialist |
-        Passionate about Building User-Centered Web Applications
+      <h3 className="text-justify mb-4">
+        Aspiring Front-End Developer, <strong>React.js </strong> &{" "}
+        <strong>Next.js </strong>
+        Specialist, Passionate about Building User-Centered Web Applications
       </h3>
-      <p className="mt-4 ">
+      <p className="mt-4 text-justify">
         I am a Front-End Developer with a passion for building clean, efficient,
         and user-friendly web applications. While specializing in frontend
         development, I also have solid experience in backend development, I’ve
@@ -29,11 +30,11 @@ const about = () => {
         <strong>component-based architecture</strong>, and ensuring{" "}
         <strong>cross-browser compatibility</strong>.
       </p>
-      <p className="mt-2 ">
+      <p className="mt-4 text-justify">
         My experience with <strong>Next.js</strong> allows me to optimize sites
         for speed and SEO, delivering better user experiences.
       </p>
-      <p className="my-8 flex flex-wrap gap-2 items-center">
+      <div className="my-8 flex flex-wrap gap-2 items-center">
         I mostly work with
         <Link
           title="TypeScript"
@@ -89,7 +90,7 @@ const about = () => {
         >
           <SiExpress color="#888" size={25} />
         </a>
-        . I also got chance to work with{" "}
+        . <span>I also got chance to work with </span>
         <a
           title="WordPress"
           href="https://wordpress.org/"
@@ -100,7 +101,7 @@ const about = () => {
           <SiWordpress color="#21759b" size={25} />
         </a>{" "}
         .
-      </p>
+      </div>
       <div className="inline-flex items-center gap-4">
         <h2 className="text-2xl font-semibold ">Let’s Connect</h2>
         <a
