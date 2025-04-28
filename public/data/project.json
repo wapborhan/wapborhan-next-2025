@@ -1,0 +1,60 @@
+[
+  {
+    "id": 1,
+    "filters": "react",
+    "url": "https://quranicjibon.vercel.app/",
+    "title": "Quranic Jibon",
+    "tags": ["React"],
+    "description": "The Quran provides comprehensive guidance for daily life, emphasizing spirituality, morality, and social responsibility. It teaches the importance of prayer, honesty, charity, respect for family, and working with integrity. By following its teachings, believers can lead a balanced life, cultivating patience, gratitude, and compassion in their interactions and actions."
+  },
+  {
+    "id": 2,
+    "filters": ["mern"],
+    "url": "https://sr-hostel.web.app/",
+    "title": "SR Hostel",
+    "tags": ["MongoDB", "Express", "ReactJS", "NodeJS"],
+    "description": "SR Hostel, just a short walk from campus, provides students with comfortable rooms and a cozy dining area. Enjoy home-style meals in a welcoming atmosphere, making it the ideal spot for both relaxation and socializing."
+  },
+  {
+    "id": 3,
+    "filters": ["mern"],
+    "url": "https://sr-jobsbd.web.app",
+    "title": "SR Jobs Portal",
+    "tags": ["MongoDB", "Express", "ReactJS", "NodeJS"],
+    "description": "Find your next opportunity with our job portal — connecting job seekers with top employers across industries. Search, apply, and grow your career today."
+  },
+  {
+    "id": 4,
+    "filters": ["nextjs"],
+    "url": "https://devfinds.vercel.app",
+    "title": "Find Devs",
+    "tags": ["Nextjs"],
+    "description": "Connect and Discover with Skilled Developers."
+  },
+  {
+    "id": 5,
+    "filters": ["mern"],
+    "url": "https://socials-link.web.app/",
+    "title": "Social Links",
+    "tags": ["MongoDB", "Express", "ReactJS", "NodeJS"],
+    "description": "Share your social links and professional profiles with each other in an extraordinary way."
+  },
+  {
+    "id": 6,
+    "filters": ["react"],
+    "url": "https://srrestaurant.vercel.app",
+    "title": "Restaurent",
+    "tags": ["React", "Firebase"],
+    "description": "Nestled in the heart of the city, Olive Grove is a cozy, modern restaurant offering a delicious fusion of Mediterranean and contemporary flavors. With fresh ingredients, warm ambiance, and friendly service, it’s the perfect spot for casual lunches, family dinners, and special celebrations."
+  },
+
+  {
+    "id": 7,
+    "filters": ["react"],
+    "url": "https://kushtiacity.web.app",
+    "title": "Kushtia City",
+    "tags": [],
+    "description": "Kushtia Zilla Help is a community website offering essential information on local news, events, services, and resources for residents and visitors of Kushtia District.",
+    "underDevelopment": true
+  }
+]

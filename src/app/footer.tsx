@@ -4,7 +4,7 @@ import { SiNextdotjs } from "react-icons/si";
 
 const footer = () => {
   return (
-    <footer className="mt-20 flex lg:flex-row gap-3 lg:mb-0 mb-5 flex-col justify-between items-center">
+    <footer className="flex lg:flex-row gap-3 lg:mb-0 pb-5 mt-10 flex-col justify-between items-center max-w-6xl mx-auto">
       <Link
         className="relative tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 no-underline hover:opacity-80 active:opacity-disabled transition-opacity text-xs items-center rounded-md overflow-hidden w-auto inline-flex border-2 border-[var(--text-color)]"
         role="link"

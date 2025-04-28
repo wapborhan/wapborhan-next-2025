@@ -4,6 +4,7 @@
 :root[data-theme="light"] {
   --background-color: #fff;
   --text-color: #000;
+  --primary-color: #e50602;
 }
 
 /* Dark Theme */
@@ -20,4 +21,27 @@ body {
 
 svg {
   fill: var(--text-color);
+}
+article ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+}
+article ol li {
+  margin-bottom: 0.5rem;
+}
+.prose ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+}
+.prose ul {
+  list-style-type: disk;
+  padding-left: 1.5rem;
+}
+
+.prose ol li {
+  margin-bottom: 0.5rem;
+}
+
+.prose a {
+  color: var(--primary-color);
 }
