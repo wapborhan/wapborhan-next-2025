@@ -1,3 +1,5 @@
+import { promises as fs } from "fs";
+
 type ProjectType = {
   id: number;
   title: string;
@@ -8,17 +10,19 @@ type ProjectType = {
 };
 
 const project = async () => {
-  const res = await fetch("http://localhost:3000/data/project.json", {
-    cache: "no-store",
-  });
+  const file = await fs.readFile(
+    process.cwd() + "/src/data/project.json",
+    "utf8"
+  );
+  const projects: ProjectType[] = JSON.parse(file);
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch projects");
-  }
+  // if (!res.ok) {
+  //   throw new Error("Failed to fetch projects");
+  // }
 
-  const projects: ProjectType[] = await res.json();
+  // const projects: ProjectType[] = await res.json();
 
-  console.log(projects);
+  console.log();
 
   return (
     <div className="my-14">
