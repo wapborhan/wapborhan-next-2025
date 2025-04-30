@@ -1,15 +1,21 @@
 import { fetchPostBySlug } from "@/lib/postDetails";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 
-type PageProps = {
-  params: {
-    slug: string;
-  };
-};
+// type PageProps = {
+//   params: {
+//     slug: string;
+//   };
+// };
 
-export default async function BlogPostPage({ params }: PageProps) {
-  const { slug } = params;
+export default async function BlogPostPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+
   const post = await fetchPostBySlug(slug);
 
   if (!post) {
@@ -19,12 +25,12 @@ export default async function BlogPostPage({ params }: PageProps) {
   return (
     <main className="max-w-3xl mx-auto px-4 py-12">
       <div className="goBack my-5">
-        <a
+        <Link
           href="/blog"
-          className="text-[var(--text-color)] border-[1px] border-[var(--primary-color)] py-2 px-4 rounded-lg bg-[var(--background-color)]  transition duration-300 ease-in-out"
+          className="text-[var(--text-color)] border-[1px] border-[var(--primary-color)] py-2 px-4 rounded-lg bg-[var(--background-color)] transition duration-300 ease-in-out"
         >
           ← Back to Blog
-        </a>
+        </Link>
       </div>
       <div className="mb-8">
         <Image
@@ -33,10 +39,11 @@ export default async function BlogPostPage({ params }: PageProps) {
           height={600}
           alt={post.title}
           className="rounded-2xl shadow-lg object-cover w-full h-auto"
+          priority
         />
       </div>
 
-      <h1 className="text-4xl font-extrabold mb-6  leading-tight">
+      <h1 className="text-4xl font-extrabold mb-6 leading-tight">
         {post.title}
       </h1>
 

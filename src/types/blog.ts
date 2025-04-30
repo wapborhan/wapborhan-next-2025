@@ -6,7 +6,10 @@ export interface BlogPost {
     dateAdded: string;
     content: string;
     excerpt: string;
-    coverImage: string;
+    coverImage: {
+      url: string;
+      attribution: string;
+    };
     tags: {
       name: string;
       slug: string;

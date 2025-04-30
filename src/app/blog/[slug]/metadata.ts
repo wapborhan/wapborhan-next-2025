@@ -1,8 +1,8 @@
 // app/blog/[slug]/metadata.ts
-import { getPostBySlug } from "@/lib/postDetails";
+import { fetchPostBySlug } from "@/lib/postDetails";
 
 export async function generatePostMetadata(slug: string) {
-  const post = await getPostBySlug(slug).catch(() => null);
+  const post = await fetchPostBySlug(slug).catch(() => null);
   
   if (!post) {
     return {
