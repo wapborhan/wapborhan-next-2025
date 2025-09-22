@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { FaEnvelope } from "react-icons/fa";
 import {
@@ -12,10 +13,36 @@ import {
 
 const about = () => {
   return (
-    <div>
-      <h2 className="text-2xl font-bold tracking-tight mb-4">
-        Hey 👋 {"I'm Borhan Uddin"}
-      </h2>
+    <div className="w-full space-y-3">
+      <div className="text-center space-y-2 mb-8">
+        <div className="logo inline-flex justify-center relative rounded-full">
+          <Image
+            src="/wb-logo.png"
+            height={300}
+            width={300}
+            alt="Borhan"
+            className="w-28 mx-auto"
+          />
+          <div className="absolute bottom-3 left-3/4">
+            <span className="relative flex size-3">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75"></span>
+              <span className="relative inline-flex size-3 rounded-full bg-green-600"></span>
+            </span>
+          </div>
+        </div>
+        <h2 className="text-2xl font-bold tracking-tight mb-4">Borhan Uddin</h2>
+        <div className="social flex justify-center gap-2 text-center">
+          <a
+            href="mailto:borhaninfos@gmail.com"
+            className=""
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Email"
+          >
+            <FaEnvelope color="#000" size={25} />
+          </a>
+        </div>
+      </div>
       <h3 className="text-justify mb-4">
         Aspiring Front-End Developer, <strong>React.js </strong> &{" "}
         <strong>Next.js </strong>
@@ -101,18 +128,6 @@ const about = () => {
           <SiWordpress color="#21759b" size={25} />
         </a>{" "}
         .
-      </div>
-      <div className="inline-flex items-center gap-4">
-        <h2 className="text-2xl font-semibold ">Let’s Connect</h2>
-        <a
-          href="mailto:borhaninfos@gmail.com"
-          className=""
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Email"
-        >
-          <FaEnvelope color="#000" size={25} />
-        </a>
       </div>
     </div>
   );

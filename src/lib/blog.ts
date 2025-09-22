@@ -75,6 +75,9 @@ export async function getHashnodePosts(): Promise<BlogPost[]> {
         throw new Error('Publication not found - check the host name');
       }
   
+console.log(result);
+
+
       return result.data.publication.posts.edges.map((edge: any) => ({
         id: edge.node.id,
         title: edge.node.title,
@@ -82,6 +85,7 @@ export async function getHashnodePosts(): Promise<BlogPost[]> {
         brief: edge.node.brief,
         publishedAt: edge.node.publishedAt,
         coverImage: edge.node.coverImage,
+        author: edge.node.author,
       }));
       
     } catch (error) {

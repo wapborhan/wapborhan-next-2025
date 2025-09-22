@@ -1,4 +1,5 @@
 import { promises as fs } from "fs";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 type ProjectType = {
   id: number;
@@ -39,10 +40,14 @@ const project = async () => {
               <h3 className="text-lg font-medium">
                 <a
                   href={project.url}
-                  className="underline underline-offset-4"
+                  className="underline underline-offset-4 flex items-center gap-3"
                   target="_blank"
                 >
-                  {project.title}
+                  {project.title}{" "}
+                  <FaExternalLinkAlt
+                    size={12}
+                    className="underline underline-offset-4"
+                  />
                   {project.underDevelopment && (
                     <span className="text-sm">(Under Development)</span>
                   )}

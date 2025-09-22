@@ -17,6 +17,6 @@ export interface BlogPost {
     author: {
       username: string;
       name: string;
-      photo: string;
+      profilePicture: string;
     };
   }

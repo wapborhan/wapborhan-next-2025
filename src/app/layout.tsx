@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/context/ThemeContext";
 import Header from "./header";
 import Footer from "./footer";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Borhan Uddin",
     description: "Borhan Uddin - Full Stack Developer",
-    url: "https://borhanuddin.com",
+    url: "https://www.wapborhan.com",
     siteName: "Borhan Uddin",
     images: [
       {
@@ -43,8 +44,8 @@ export const metadata: Metadata = {
     title: "Borhan Uddin",
     description: "Borhan Uddin - Full Stack Developer",
     images: ["https://borhanuddin.com/og-image.png"],
-    creator: "@borhanuddin",
-    site: "@borhanuddin",
+    creator: "@wapborhan",
+    site: "@wapborhan",
   },
   themeColor: "#000000",
   appleWebApp: {
@@ -60,24 +61,7 @@ export const metadata: Metadata = {
       "/apple-touch-startup-image-1242x2688.png",
     ],
   },
-  manifest: "/site.webmanifest",
-
-  viewport: {
-    initialScale: 1,
-    maximumScale: 1,
-    userScalable: false,
-    width: "device-width",
-    height: "device-height",
-  },
-
-  verification: {
-    google: "google-site-verification",
-    yandex: "yandex-verification",
-    other: {
-      name: "other-verification",
-      value: "other-verification-value",
-    },
-  },
+  // manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({
@@ -95,6 +79,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
