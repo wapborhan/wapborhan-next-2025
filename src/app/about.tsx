@@ -1,6 +1,6 @@
+import { iconsData } from "@/data/iconsData";
 import Image from "next/image";
 import Link from "next/link";
-import { FaEnvelope } from "react-icons/fa";
 import {
   SiExpress,
   SiMongodb,
@@ -30,17 +30,25 @@ const about = () => {
             </span>
           </div>
         </div>
-        <h2 className="text-2xl font-bold tracking-tight mb-4">Borhan Uddin</h2>
-        <div className="social flex justify-center gap-2 text-center">
-          <a
-            href="mailto:borhaninfos@gmail.com"
-            className=""
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Email"
-          >
-            <FaEnvelope color="#000" size={25} />
-          </a>
+        <h2 className="md:text-5xl text-lg font-bold tracking-tight mb-4">
+          Borhan Uddin
+        </h2>
+        <div className="social flex justify-center gap-4 text-center">
+          {iconsData.slice(1).map((item, index) => {
+            const Icon = item.icon;
+            return (
+              <Link
+                key={index}
+                href={item.link}
+                className=""
+                target="_blank"
+                rel="noopener noreferrer"
+                title={item.name}
+              >
+                <Icon size={25} />
+              </Link>
+            );
+          })}
         </div>
       </div>
       <h3 className="text-justify mb-4">

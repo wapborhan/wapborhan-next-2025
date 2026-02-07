@@ -1,19 +1,11 @@
+import ProjectCard from "@/components/ProjectCard";
+import { ProjectType } from "@/types/project";
 import { promises as fs } from "fs";
-import { FaExternalLinkAlt } from "react-icons/fa";
 
-type ProjectType = {
-  id: number;
-  title: string;
-  description: string;
-  url: string;
-  tags: string[];
-  underDevelopment?: boolean;
-};
-
-const project = async () => {
+const Project = async () => {
   const file = await fs.readFile(
     process.cwd() + "/src/data/project.json",
-    "utf8"
+    "utf8",
   );
   const projects: ProjectType[] = JSON.parse(file);
 
@@ -23,55 +15,33 @@ const project = async () => {
 
   // const projects: ProjectType[] = await res.json();
 
-  console.log();
+  const title = `text-lg md:text-4xl font-bold tracking-tight mb-4  text-center`;
+  const desc = `text-lg mb-8 text-slate-500 text-center max-w-4/6 mx-auto`;
 
   return (
     <div className="my-14">
-      <h2 className="text-2xl font-medium tracking-tight mb-4">Projects</h2>
-      <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4">
-        {projects.map((project) => {
-          return (
-            <div
-              key={project.id}
-              className={
-                project?.underDevelopment ? "opacity-50" : "opacity-100"
-              }
-            >
-              <h3 className="text-lg font-medium">
-                <a
-                  href={project.url}
-                  className="underline underline-offset-4 flex items-center gap-3"
-                  target="_blank"
-                >
-                  {project.title}{" "}
-                  <FaExternalLinkAlt
-                    size={12}
-                    className="underline underline-offset-4"
-                  />
-                  {project.underDevelopment && (
-                    <span className="text-sm">(Under Development)</span>
-                  )}
-                </a>
-              </h3>
-              <p className="text-sm  mt-1 mb-2">{project.description}</p>
-              <p className="flex flex-wrap gap-1">
-                {project.tags.map((tag) => {
-                  return (
-                    <span
-                      key={tag}
-                      className="inline-flex text-xs font-medium px-2.5 py-1 bg-secondary rounded-md border"
-                    >
-                      {tag}
-                    </span>
-                  );
-                })}
-              </p>
-            </div>
-          );
-        })}
+      <div className="main-project">
+        <h2 className={`${title}`}>Projects</h2>
+        <p className={`${desc}`}>
+          I've built everything from simple websites to powerful web apps. Here
+          are some of the projects.
+        </p>
+        <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4">
+          {projects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
+        </div>
+      </div>
+      <div className="simple-projects my-14">
+        <h2 className={`${title}`}>Simple Projects</h2>
+        <p className={`${desc}`}>
+          In my free time, I like to work on small side projects. These are
+          usually simple applications or experiments that help me learn new
+          skills and have fun with code.
+        </p>
       </div>
     </div>
   );
 };
 
-export default project;
+export default Project;

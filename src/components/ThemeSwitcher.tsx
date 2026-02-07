@@ -17,7 +17,7 @@ const ThemeSwitcher: React.FC = () => {
       onClick={toggleTheme}
       className="cursor-pointer p-2 rounded-full  transition duration-300 ease-in-out"
     >
-      {theme === "light" ? <FaMoon size={18} /> : <FaSun size={18} />}
+      {theme === "light" ? <FaMoon size={20} /> : <FaSun size={20} />}
     </button>
   );
 };

@@ -1,4 +1,3 @@
-// components/ServicesSection.tsx
 "use client";
 
 import { FC } from "react";
@@ -43,11 +42,11 @@ const services: Service[] = [
   },
 ];
 
-const ServicesSection: FC = () => {
+const Skills: FC = () => {
   return (
-    <section className="py-16 ">
-      <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-lg md:text-2xl font-bold text-start mb-12 ">
+    <section className="py-16">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-lg md:text-4xl font-bold text-center mb-12 ">
           Skills
         </h2>
         <div className="grid md:grid-cols-4 gap-8">
@@ -55,7 +54,8 @@ const ServicesSection: FC = () => {
             <motion.div
               key={service.title}
               initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
               transition={{ delay: index * 0.2 }}
               className=""
             >
@@ -79,4 +79,4 @@ const ServicesSection: FC = () => {
   );
 };
 
-export default ServicesSection;
+export default Skills;

@@ -1,35 +1,23 @@
 import Link from "next/link";
-import React from "react";
-import { SiNextdotjs } from "react-icons/si";
+import { FaWhatsapp } from "react-icons/fa";
 
-const footer = () => {
+const Footer = () => {
   return (
-    <footer className="flex lg:flex-row gap-3 lg:mb-0 pb-5 mt-10 flex-col justify-between items-center max-w-6xl mx-auto">
-      <Link
-        className="relative tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 no-underline hover:opacity-80 active:opacity-disabled transition-opacity text-xs items-center rounded-md overflow-hidden w-auto inline-flex border-2 border-[var(--text-color)]"
-        role="link"
-        href="https://x.com/wapborhan"
-        target="_blank"
-      >
-        <span className="pl-3 font-bold">BUILT BY </span>
-        <span className=" px-2 py-1 h-full block font-bold">
-          ❤️ BORHAN UDDIN
-        </span>
-      </Link>
-
-      <Link
-        className="relative tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 no-underline hover:opacity-80 active:opacity-disabled transition-opacity text-xs items-center rounded-md overflow-hidden w-auto inline-flex border-2 border-[var(--text-color)]"
-        role="link"
-        href="https://nextjs.org/"
-        target="_blank"
-      >
-        <span className="pl-3 font-bold">BUILT WITH NEXTJS</span>
-        <span className="text-2xl px-2 py-1 h-full block">
-          <SiNextdotjs color="#fff" size={20} />
-        </span>
-      </Link>
+    <footer className="text-center max-w-6xl mx-auto py-10">
+      <h2 className="text-5xl font-bold"> Let's Connect</h2>
+      <p className="text-lg py-4 text-slate-500">
+        Got a question or want to chat? <br /> Feel free to reach out to me on{" "}
+        <Link
+          href="https://wa.me/+8801620557840"
+          className="underline inline-flex gap-2 items-center justify-center"
+          target="__BLANK"
+        >
+          <FaWhatsapp /> WhatsApp
+        </Link>
+        . <br /> I'm always open to meaningful conversations.
+      </p>
     </footer>
   );
 };
 
-export default footer;
+export default Footer;

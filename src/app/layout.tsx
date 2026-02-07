@@ -1,19 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/context/ThemeContext";
-import Header from "./header";
-import Footer from "./footer";
 import { Analytics } from "@vercel/analytics/next";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  display: "swap", // optional: prevents invisible text during load
+  variable: "--font-inter", // optional: useful for CSS variables or Tailwind
 });
 
 export const metadata: Metadata = {
@@ -71,14 +65,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased `}
-      >
-        <ThemeProvider>
-          <Header />
-          {children}
-          <Footer />
-        </ThemeProvider>
+      <body className={`${inter.variable}  antialiased `}>
+        <ThemeProvider>{children}</ThemeProvider>
         <Analytics />
       </body>
     </html>
