@@ -12,11 +12,7 @@ export type IconItem = {
 };
 
 export const iconsData: IconItem[] = [
-  {
-    name: "Home",
-    icon: FaHome,
-    link: "/"
-  },
+
   {
     name: "Facebook",
     icon: FaFacebookSquare,
@@ -36,9 +32,5 @@ export const iconsData: IconItem[] = [
     icon: FaSquareXTwitter,
     link: "https://www.twitter.com/wapborhan"
   },
-  {
-    name: "Email",
-    icon: IoMdMail,
-    link: "mailto:borhaninfos@gmail.com"
-  },
+
 ];

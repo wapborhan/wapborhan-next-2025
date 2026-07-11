@@ -49,6 +49,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     localStorage.setItem("theme", theme);
     const root = document.documentElement;
     root.setAttribute("data-theme", theme);
+    root.setAttribute("class", theme);
   }, [theme]);
 
   return (

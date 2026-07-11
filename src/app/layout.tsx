@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "./global.css";
 import { ThemeProvider } from "@/context/ThemeContext";
 import { Analytics } from "@vercel/analytics/next";
 
@@ -65,7 +65,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable}  antialiased `}>
+      <body
+        className={`${inter.variable}  antialiased `}
+        style={{ overflow: "auto" }}
+      >
         <ThemeProvider>{children}</ThemeProvider>
         <Analytics />
       </body>

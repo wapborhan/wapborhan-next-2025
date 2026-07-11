@@ -1,10 +1,18 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */ 
+  /* config options here */
+
   images: {
-    domains: ['cdn.hashnode.com'],
-  },
-};
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn.hashnode.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
+  }
+}
 
 export default nextConfig;

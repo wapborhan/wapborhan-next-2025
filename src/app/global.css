@@ -1,31 +1,71 @@
 @import "tailwindcss";
 
+/* @theme {
+  --background: #fff;
+  --foreground: #171717;
+  --border: #e5e5e5;
+  --primary: #00a63e;
+  --text: #191919;
+  --secondary: #3e3e3e;
+  --font-fallback: Arial, Helvetica, sans-serif;
+ 
+} */
+
 /* Light Theme */
-:root[data-theme="light"] {
+/* :root[data-theme="light"] {
   --background-color: #fff;
   --revarse-background-color: #020817;
   --text-color: #000;
   --revarse-text-color: #fff;
   --primary-color: #e50602;
+} */
+
+
+
+:root[data-theme="light"] {
+  --background: #fff;
+  --foreground: #171717;
+  --border: #e5e5e5;
+  --primary: #00a63e;
+  --text: #191919;
+  --secondary: #3e3e3e;
+  --font-fallback: Arial, Helvetica, sans-serif;
 }
 
-/* Dark Theme */
 :root[data-theme="dark"] {
+  --background: #000;
+  --foreground: #ededed;
+  --border: #262626;
+  --text: #f2f2f2;
+  --secondary: #c1c1c1;
+}
+
+
+
+/* Dark Theme */
+/* :root[data-theme="dark"] {
   --background-color: #020817;
   --revarse-background-color: #fff;
   --text-color: #fff;
   --revarse-text-color: #000;
-}
+} */
 
 /* Apply default values */
-body {
-  background-color: var(--background-color);
-  color: var(--text-color);
+html {
+  scroll-behavior: smooth;
 }
 
-svg {
-  fill: var(--text-color);
+body {
+  background-color: var(--background);
+  color: var(--text);
+  border-color: var(--border) !important;
 }
+
+.border-border {
+  border-color: var(--border);
+}
+
+
 
 article ol {
   list-style-type: decimal;
